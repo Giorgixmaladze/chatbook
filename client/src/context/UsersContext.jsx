@@ -3,9 +3,9 @@ import { createContext } from "react";
 
 export const usersContext = createContext()
 
-const API_URL = import.meta.env.VITE_API_URL
-const UserProvider = ({children}) =>{
-    const [users,setUsers] = useState([])
+const API_URL = import.meta.env.VITE_API_URL || ""
+const UserProvider = ({ children }) => {
+    const [users, setUsers] = useState([])
     const [pagination, setPagination] = useState({
         currentPage: 1,
         totalPages: 1,
@@ -15,10 +15,10 @@ const UserProvider = ({children}) =>{
         hasPrevPage: false
     })
 
-    const getAllUsers = async (page = 1, limit = 10) =>{
-        try{
-            const res = await fetch(`${API_URL}/user?page=${page}&limit=${limit}`,{
-                credentials:"include"
+    const getAllUsers = async (page = 1, limit = 10) => {
+        try {
+            const res = await fetch(`${API_URL}/user?page=${page}&limit=${limit}`, {
+                credentials: "include"
             })
 
             const data = await res.json()
@@ -30,15 +30,15 @@ const UserProvider = ({children}) =>{
                 // Fallback for old API format
                 setUsers(data)
             }
-        }catch(err){
+        } catch (err) {
             console.error(err)
         }
     }
 
 
 
-    return(
-        <usersContext.Provider value={{users, pagination, getAllUsers}}>
+    return (
+        <usersContext.Provider value={{ users, pagination, getAllUsers }}>
             {children}
         </usersContext.Provider>
     )

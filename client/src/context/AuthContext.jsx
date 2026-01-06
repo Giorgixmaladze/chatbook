@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 export const AuthContext = createContext()
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || ""
 const AuthProvider = ({ children }) => {
 
     const navigate = useNavigate()
@@ -74,28 +74,28 @@ const AuthProvider = ({ children }) => {
         }
     }
 
-    const logOut = async () =>{
-        try{
-            await fetch(`${API_URL}/users/logout`,{
-                method:"POST",
-                headers:{
-                    "Content-type":"application/json"
+    const logOut = async () => {
+        try {
+            await fetch(`${API_URL}/users/logout`, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
                 },
-                credentials:"include",
+                credentials: "include",
             })
             navigate("/login")
-        }catch(err){
+        } catch (err) {
             console.error(err)
         }
     }
 
     useEffect(() => {
-        
+
         autoLogin()
     }, [])
 
     return (
-        <AuthContext.Provider value={{ login, signUp, user,logOut}}>
+        <AuthContext.Provider value={{ login, signUp, user, logOut }}>
             {children}
         </AuthContext.Provider>
     )

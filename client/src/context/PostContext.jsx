@@ -4,7 +4,7 @@ import { AuthContext } from "./AuthContext"
 
 export const PostContext = createContext()
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || ""
 const PostProvider = ({ children }) => {
     const [posts, setPosts] = useState([])
     const [pagination, setPagination] = useState({
@@ -17,11 +17,11 @@ const PostProvider = ({ children }) => {
     const { user } = useContext(AuthContext)
 
 
-    const getAllPosts = async(page = 1, limit = 5) =>{
-        try{
+    const getAllPosts = async (page = 1, limit = 5) => {
+        try {
             setPosts([])
-            const res = await fetch(`${API_URL}/post?page=${page}&limit=${limit}`,{
-                credentials:"include"
+            const res = await fetch(`${API_URL}/post?page=${page}&limit=${limit}`, {
+                credentials: "include"
             })
             if (!res.ok) {
                 throw new Error("Failed to fetch posts")
@@ -37,14 +37,14 @@ const PostProvider = ({ children }) => {
             console.log(data)
 
 
-        }catch(err){
+        } catch (err) {
             console.error(err)
         }
     }
 
     const getPostsByUser = async (userId) => {
         if (!userId) return
-        
+
         try {
             const res = await fetch(`${API_URL}/post/${userId}`, {
                 credentials: "include"
@@ -86,10 +86,10 @@ const PostProvider = ({ children }) => {
             }
 
             const newPost = await res.json()
-            
-  
+
+
             setPosts(prevPosts => [...prevPosts, newPost])
-            
+
             return newPost
         } catch (err) {
             console.error(err)
