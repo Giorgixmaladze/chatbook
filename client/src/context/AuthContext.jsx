@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const login = async (formObj) => {
         try {
-            const res = await fetch(`${API_URL}/users/login`, {
+            const res = await fetch(`${API_URL}/user/login`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
 
     const signUp = async (formObj) => {
         try {
-            const res = await fetch(`${API_URL}/users/register`, {
+            const res = await fetch(`${API_URL}/user/register`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
 
     const autoLogin = async () => {
         try {
-            const res = await fetch(`${API_URL}/users/me`, {
+            const res = await fetch(`${API_URL}/user/me`, {
                 method: "GET",
                 credentials: "include",
             })

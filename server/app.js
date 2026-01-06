@@ -27,10 +27,14 @@ if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"))
 }
 app.use(cookieParser())
-app.use("/posts", postRouter)
-app.use("/users", userRouter)
-app.use("/comments", commentRouter)
+app.use("/post", postRouter)
+app.use("/user", userRouter)
+app.use("/comment", commentRouter)
 app.use(globalErrorHandler)
+
+app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 mongoose.connect(process.env.DATABASE_URL)
     .then(() => {

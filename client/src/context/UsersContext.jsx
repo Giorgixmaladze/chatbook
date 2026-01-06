@@ -17,7 +17,7 @@ const UserProvider = ({children}) =>{
 
     const getAllUsers = async (page = 1, limit = 10) =>{
         try{
-            const res = await fetch(`${API_URL}/users?page=${page}&limit=${limit}`,{
+            const res = await fetch(`${API_URL}/user?page=${page}&limit=${limit}`,{
                 credentials:"include"
             })
 

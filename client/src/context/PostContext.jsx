@@ -20,7 +20,7 @@ const PostProvider = ({ children }) => {
     const getAllPosts = async(page = 1, limit = 5) =>{
         try{
             setPosts([])
-            const res = await fetch(`${API_URL}/posts?page=${page}&limit=${limit}`,{
+            const res = await fetch(`${API_URL}/post?page=${page}&limit=${limit}`,{
                 credentials:"include"
             })
             if (!res.ok) {
@@ -46,7 +46,7 @@ const PostProvider = ({ children }) => {
         if (!userId) return
         
         try {
-            const res = await fetch(`${API_URL}/posts/${userId}`, {
+            const res = await fetch(`${API_URL}/post/${userId}`, {
                 credentials: "include"
             })
 
@@ -72,7 +72,7 @@ const PostProvider = ({ children }) => {
 
     const createPost = async (formObj) => {
         try {
-            const res = await fetch(`${API_URL}/posts`, {
+            const res = await fetch(`${API_URL}/post`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
