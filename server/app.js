@@ -16,7 +16,7 @@ dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["https://chatbook-e7vr.onrender.com", "http://localhost:5173", "http://localhost:3000"],
+    origin: "https://chatbook-e7vr.onrender.com/",
     credentials: true
 }))
 
