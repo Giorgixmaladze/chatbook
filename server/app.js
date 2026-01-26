@@ -16,7 +16,7 @@ dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin:'https://chatbook-1.onrender.com',
+    origin:'https://chatbook-2.onrender.com',
     credentials: true
 }))
 
