@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to React Hooks",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "react",
+      "javascript",
+      "frontend"
+    ],
+    "content": "Short guide to useEffect and useState with practical examples.",
+    "published_date": "2025-10-01T10:00:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 2,
+    "title": "How to Optimize SQL Queries",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "sql",
+      "database",
+      "performance"
+    ],
+    "content": "Indexing, query plans and common pitfalls when writing SQL.",
+    "published_date": "2025-10-02T09:30:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 3,
+    "title": "Top 10 Cafes in Tbilisi",
+    "author": "Nino",
+    "category": "Lifestyle",
+    "tags": [
+      "tbilisi",
+      "cafes",
+      "food"
+    ],
+    "content": "A local guide to cozy spots and best coffee in the city.",
+    "published_date": "2025-10-03T14:15:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 4,
+    "title": "Deploying Node.js Apps to Production",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "nodejs",
+      "devops",
+      "deployment"
+    ],
+    "content": "Docker, process managers and environment best practices.",
+    "published_date": "2025-10-04T11:00:00+0400",
+    "status": "draft"
+  },
+  {
+    "id": 5,
+    "title": "Weekend Escape: Stepantsminda",
+    "author": "Anna",
+    "category": "Travel",
+    "tags": [
+      "georgia",
+      "travel",
+      "mountains"
+    ],
+    "content": "How to plan a short trip to Stepantsminda with packing tips.",
+    "published_date": "2025-10-05T07:45:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 6,
+    "title": "State of CSS in 2025",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "css",
+      "frontend",
+      "design"
+    ],
+    "content": "New features, layout modules and performance considerations.",
+    "published_date": "2025-10-06T12:00:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 7,
+    "title": "Simple Vegan Recipes for Beginners",
+    "author": "Nino",
+    "category": "Food",
+    "tags": [
+      "vegan",
+      "recipes",
+      "beginner"
+    ],
+    "content": "Easy, fast and healthy meals you can make in under 30 minutes.",
+    "published_date": "2025-10-06T18:20:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 8,
+    "title": "Understanding Database Normalization",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "database",
+      "normalization",
+      "sql"
+    ],
+    "content": "Explained with examples for 1NF, 2NF and 3NF.",
+    "published_date": "2025-10-07T09:00:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 9,
+    "title": "Photography Tips: Low Light",
+    "author": "Anna",
+    "category": "Lifestyle",
+    "tags": [
+      "photography",
+      "tips",
+      "camera"
+    ],
+    "content": "Settings and techniques to shoot better in low-light conditions.",
+    "published_date": "2025-10-08T20:10:00+0400",
+    "status": "draft"
+  },
+  {
+    "id": 10,
+    "title": "Building Accessible Web Apps",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "accessibility",
+      "a11y",
+      "web"
+    ],
+    "content": "Practical checklist and examples to improve accessibility.",
+    "published_date": "2025-10-09T08:00:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 11,
+    "title": "A Short Guide to Git Rebase",
+    "author": "Gio Khmaladze",
+    "category": "Technology",
+    "tags": [
+      "git",
+      "version-control",
+      "workflow"
+    ],
+    "content": "When to rebase, when to merge, and how to avoid conflicts.",
+    "published_date": "2025-10-09T09:45:00+0400",
+    "status": "published"
+  },
+  {
+    "id": 12,
+    "title": "Travel Light: Packing Checklist",
+    "author": "Anna",
+    "category": "Travel",
+    "tags": [
+      "packing",
+      "travel",
+      "checklist"
+    ],
+    "content": "Minimal packing list for short trips and carry-on only travel.",
+    "published_date": "2025-10-09T10:30:00+0400",
+    "status": "published"
+  }
+]
